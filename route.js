@@ -16,7 +16,7 @@ route["/text"]="A example text page."                                           
 route["/404"]=function(){
   return ["404 Not found.",{status:404,headers:{}}]
 }                                                                                                //404 page template(/404)
-route["/500"]=function(url){
+route["/500"]=function(url,e){
   if(url.pathname==="/500"){
     return route["/404"](url)
   }                                                                                              //hide 500 page
