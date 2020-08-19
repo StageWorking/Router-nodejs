@@ -24,5 +24,5 @@ route["/500"]=function(url){
 }                                                                                                //custom 500 error page(/500)
 route["/error"]=function(){
   throw new Error("Throw an error.")
-}
+}                                                                                                //Throw an error then show 500 page
 module.exports=route
