@@ -1,3 +1,7 @@
+/* Router-nodejs
+ * https://github.com/h5mcbox/Router-nodejs/
+ * 2020/08/19
+*/
 const route={}
 const hostbind="" //const hostbind="https://example.com"
 const router=function(url,res, body = route["/404"], status = 200, headers = {}) {
