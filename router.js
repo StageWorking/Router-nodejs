@@ -1,10 +1,11 @@
 const route={}
+const hostbind="" //const hostbind="https://example.com"
 const router=function(url,res, body = route["/404"], status = 200, headers = {}) {
     var url = new URL(url);
     try {
         if (typeof body === "function") {
             var func = body(url);
-            res.writeHead.apply(this, func[1]);
+            res.writeHead(func[1]["status"],func[1]["headers"]);
             res.end(func[0]);
         }
         else {
